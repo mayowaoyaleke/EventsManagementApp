@@ -1,0 +1,5 @@
+> link to download the .jar file
+https://github.com/k33ptoo/KControls/raw/master/dist/KControls.jar
+
+> link on how to install it (directly under the first image)
+https://github.com/k33ptoo/KControls
