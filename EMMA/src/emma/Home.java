@@ -5,6 +5,9 @@
  */
 package emma;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author OLUSOLA FOLAKEMI
@@ -27,23 +30,79 @@ public class Home extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        CloseBtn = new keeptoo.KButton();
+        MinimizeBtn = new keeptoo.KButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocation(new java.awt.Point(170, 100));
-        setResizable(false);
+        setMaximumSize(new java.awt.Dimension(1058, 519));
+        setMinimumSize(new java.awt.Dimension(1058, 519));
+        setUndecorated(true);
+        setSize(new java.awt.Dimension(1058, 519));
+
+        CloseBtn.setBorder(null);
+        CloseBtn.setText("X");
+        CloseBtn.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        CloseBtn.setkBorderRadius(100);
+        CloseBtn.setkHoverForeGround(java.awt.Color.white);
+        CloseBtn.setkHoverStartColor(new java.awt.Color(0, 102, 102));
+        CloseBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CloseBtnActionPerformed(evt);
+            }
+        });
+
+        MinimizeBtn.setBorder(null);
+        MinimizeBtn.setText("-");
+        MinimizeBtn.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        MinimizeBtn.setkBorderRadius(100);
+        MinimizeBtn.setkHoverForeGround(java.awt.Color.white);
+        MinimizeBtn.setkHoverStartColor(new java.awt.Color(0, 102, 102));
+        MinimizeBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MinimizeBtnActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1050, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(964, Short.MAX_VALUE)
+                .addComponent(MinimizeBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(CloseBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 519, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(CloseBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(MinimizeBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(470, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void CloseBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CloseBtnActionPerformed
+        // TODO add your handling code here:
+        System.exit(0);
+    }//GEN-LAST:event_CloseBtnActionPerformed
+
+    private void MinimizeBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MinimizeBtnActionPerformed
+        try
+        {
+            Thread.sleep(100);
+            this.setState(Home.ICONIFIED);
+        } 
+        catch (InterruptedException ex) {
+            Logger.getLogger(Home.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_MinimizeBtnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -81,5 +140,7 @@ public class Home extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private keeptoo.KButton CloseBtn;
+    private keeptoo.KButton MinimizeBtn;
     // End of variables declaration//GEN-END:variables
 }

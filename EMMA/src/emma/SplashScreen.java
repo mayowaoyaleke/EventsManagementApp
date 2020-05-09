@@ -44,15 +44,17 @@ public class SplashScreen extends javax.swing.JFrame {
         getContentPane().add(loadbar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 294, 719, 6));
         loadbar.getAccessibleContext().setAccessibleName("");
 
-        label.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
-        label.setForeground(java.awt.Color.white);
+        label.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
+        label.setForeground(new java.awt.Color(204, 0, 90));
         label.setText("Welcome...");
         label.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         label.setName(""); // NOI18N
-        getContentPane().add(label, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 274, 394, -1));
+        getContentPane().add(label, new org.netbeans.lib.awtextra.AbsoluteConstraints(4, 274, 400, -1));
 
         kGradientPanel1.setkBorderRadius(0);
+        kGradientPanel1.setkEndColor(new java.awt.Color(0, 153, 153));
         kGradientPanel1.setkGradientFocus(700);
+        kGradientPanel1.setkStartColor(new java.awt.Color(153, 255, 153));
 
         javax.swing.GroupLayout kGradientPanel1Layout = new javax.swing.GroupLayout(kGradientPanel1);
         kGradientPanel1.setLayout(kGradientPanel1Layout);
