@@ -1,0 +1,20 @@
+> link to download the .jar file
+https://github.com/k33ptoo/KControls/raw/master/dist/KControls.jar
+
+> link on how to install it (directly under the first image)
+https://github.com/k33ptoo/KControls
+
+ git config --global user.name "mayowaoyaleke"
+git config --global user.email "mayowaoyaleke.mo@gmail.com"
+
+git checkout -b"mayors-branch"
+
+git add .
+
+git push
+
+git pull
+
+git pull origin master
+
+git commit -m"message"

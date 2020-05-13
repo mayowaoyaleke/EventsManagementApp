@@ -24,18 +24,8 @@ public class EMMA {
             {
                 Thread.sleep(100);
                 sp.loadbar.setValue(x);
-                if (x >= 25 && x <= 50)
-                {
-                    sp.label.setText("Getting ready...");
-                }
-                if (x >= 51 && x <= 80)
-                {
-                    sp.label.setText("Setting up work environment...");
-                }
-                if (x >= 81)
-                {
-                    sp.label.setText("Finishing up...");
-                }
+                sp.label.setText(x+"%");
+               
                 if (x == 100)
                 {
                     Home ho = new Home();
